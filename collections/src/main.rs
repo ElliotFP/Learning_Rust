@@ -34,11 +34,13 @@ fn main() {
 use std::collections::HashMap;
 
 fn track() {
-    let mut map = HashMap::new();
+    let mut scores = HashMap::new();
 
-    map.insert(String::from("Blue"), 10);
-    map.insert(String::from("Yellow"), 50);
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
 
     let team_name = String::from("Blue");
-    let score = map.get(&team_name).copied().unwrap_or(0);
+    let score = scores.get(&team_name).copied().unwrap_or(0);
+
+    println!("score: {}", score);
 }
